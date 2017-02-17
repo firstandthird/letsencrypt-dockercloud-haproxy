@@ -1,5 +1,5 @@
 haproxy:
-  image: firstandthird/haproxy:master
+  image: firstandthird/dockercloud-haproxy:latest
   links:
     - letsencrypt
     - web
@@ -11,7 +11,7 @@ haproxy:
   volumes_from:
     - letsencrypt
 letsencrypt:
-  image: firstandthird/letsencrypt:master
+  image: firstandthird/dockercloud-letsencrypt:latest
   environment:
     - DOMAINS=foo.com,www.foo.com;bar.com,www.bar.com
     - EMAIL=admins@interaction.net.au
