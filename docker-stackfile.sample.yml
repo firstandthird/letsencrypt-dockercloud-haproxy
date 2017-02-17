@@ -1,5 +1,5 @@
 haproxy:
-  image: interaction/haproxy:master
+  image: firstandthird/haproxy:master
   links:
     - letsencrypt
     - web
@@ -11,7 +11,7 @@ haproxy:
   volumes_from:
     - letsencrypt
 letsencrypt:
-  image: interaction/letsencrypt:master
+  image: firstandthird/letsencrypt:master
   environment:
     - DOMAINS=foo.com,www.foo.com;bar.com,www.bar.com
     - EMAIL=admins@interaction.net.au
